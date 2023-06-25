@@ -1,6 +1,23 @@
 import {test,expect} from 'vitest'
-import { sum } from '../src/utils'
+import { fetchJsonData, sum } from '../src/utils'
 
-test('sum(1,2) is 3',()=>{
-    expect(sum(1,2)).toBe(3)
+test('sum of 1,2 is 3',()=>{
+    const expected = 3;
+    const actual = sum(1,2);
+
+    expect(expected).toBe(actual)
+})
+
+test('fetch todos length is 100',async ()=>{
+    const url = 'https://jsonplaceholder.typicode.com/todos';
+    const expectdLength = 200;
+    let actualLength;
+    const data = await fetchJsonData(url);
+    if(Array.isArray(data)){
+        const array = data as [];
+        actualLength = array.length;
+    }
+    
+    
+    expect(expectdLength).toBe(actualLength)
 })

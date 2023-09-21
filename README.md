@@ -4,5 +4,13 @@
 <li>Show that project with es module and typescript can be tested simply by installing vitest (compare with jest ....)</li>
 </ol>
 
+<h2>Setup</h2>
+
+```
+npm init -y
+pnpm i -D vitest
+package.json -> scripts -> "test": "vitest"
+```
+
 <h2>Limitation</h2>
 for some reason the test with fetch is failing when all tests are running. After h -> f it works ok in general

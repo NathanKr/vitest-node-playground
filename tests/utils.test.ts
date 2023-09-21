@@ -18,8 +18,6 @@ test('fetch todos length is 200',async ()=>{
         actualLength = array.length;
     }
     
-    
-    // expect(expectdLength).toBe(actualLength)
-    expect(1).toBe(1)
+    expect(expectdLength).toBe(actualLength)
 })
 

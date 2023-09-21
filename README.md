@@ -10,7 +10,11 @@
 npm init -y
 pnpm i -D vitest
 package.json -> scripts -> "test": "vitest"
+
 ```
 
-<h2>Limitation</h2>
-for some reason the test with fetch is failing when all tests are running. After h -> f it works ok in general
+<h2>Limitations</h2>
+<ul>
+<li>For some reason the test with fetch is failing when all tests are running. After h -> f it works ok in general</li>
+<li>This setup is for testing only. To run it you need tsconfig.json and ts-node. check <a href='https://www.youtube.com/watch?v=TsDjJ5LuJtc'>my video</a></li>
+</ul>
